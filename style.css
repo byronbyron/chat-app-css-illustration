@@ -132,8 +132,16 @@ body {
 }
 
 .chat {
-  font-size: 0.625rem;
-  padding: 0.625rem;
+  font-size: 0.5rem;
+  line-height: 1.5;
+  padding: 0.75rem 0.5rem;
+}
+
+.message {
+  padding: 0.3125rem 0.5rem;
+  border-radius: 0.5rem;
+  max-width: 128px;
+  margin-bottom: 0.5rem;
 }
 
 .chat p {
@@ -142,18 +150,31 @@ body {
 
 .right,
 .left {
-  max-width: 130px;
   margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .right {
-  text-align: right;
   margin-left: auto;
+  align-items: flex-end;
 }
 
-.right.photos {
+.left .message {
+  color: hsl(276, 55%, 52%);
+  background: hsl(289deg 56% 63% / 10%);
+}
+
+.right .message {
+  color: hsl(271, 15%, 43%);
+  background-color: var(--white);
+  box-shadow: 0 0.5rem 0.5rem hsl(0deg 0% 0% / 5%);
+}
+
+.photos {
   max-width: 144px;
   margin-bottom: 0;
+  background: none;
 }
 
 .photos ul {
